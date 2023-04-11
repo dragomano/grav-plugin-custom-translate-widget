@@ -1,0 +1,26 @@
+{
+  "name": "dragomano/custom-translate-widget",
+  "type": "grav-plugin",
+  "description": "Adds a floating block with a list of languages to translate your site into the visitor's language.",
+  "keywords": ["grav", "grav-plugin", "grav-translate-widget", "custom-translate-widget", "translate", "yandex-translate"],
+  "homepage": "https://github.com/dragomano/grav-plugin-custom-translate-widget",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bugo",
+      "email": "bugo@dragomano.ru",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.6"
+  },
+  "autoload": {
+    "classmap": ["custom-translate-widget.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.3.6"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+name: Custom Translate Widget
+slug: custom-translate-widget
+type: plugin
+version: 0.1.0
+description: "Adds a floating block with a list of languages to translate your site into the visitor's language."
+icon: language
+author:
+  name: Bugo
+  email: bugo@dragomano.ru
+homepage: https://github.com/dragomano/grav-plugin-custom-translate-widget
+keywords: grav, grav-plugin, grav-translate-widget, custom-translate-widget, translate, yandex-translate
+bugs: https://github.com/dragomano/grav-plugin-custom-translate-widget/issues
+license: MIT
+
+dependencies:
+    - { name: grav, version: '>=1.7.40' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    languages:
+      type: select
+      multiple: true
+      label: PLUGIN_CUSTOM_TRANSLATE_WIDGET.LANGUAGES
+      help: PLUGIN_CUSTOM_TRANSLATE_WIDGET.LANGUAGES_HELP
+      data-options@: '\Grav\Plugin\CustomTranslateWidgetPlugin::getLangList'
+      validate:
+        type: commalist
+
+    trans_lang:
+        type: select
+        size: small
+        label: PLUGIN_CUSTOM_TRANSLATE_WIDGET.TRANS_LANG
+        help: PLUGIN_CUSTOM_TRANSLATE_WIDGET.TRANS_LANG_HELP
+        data-options@: '\Grav\Plugin\CustomTranslateWidgetPlugin::getLangList2'

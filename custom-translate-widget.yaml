@@ -1,0 +1,19 @@
+enabled: true
+languages:
+  - de
+  - el
+  - en
+  - es
+  - nl
+  - sv
+  - tr
+  - hi
+  - it
+  - pt
+  - ru
+  - fr
+  - uk
+  - zh
+  - eo
+  - ar
+trans_lang: ''

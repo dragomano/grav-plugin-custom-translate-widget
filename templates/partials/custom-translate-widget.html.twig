@@ -1,0 +1,23 @@
+<div class="lang lang_fixed">
+    <div id="ytWidget" style="display: none"></div>
+    <div class="lang__link lang__link_select" data-lang-active="">
+        <div class="lang__code lang_{{ html_lang }}"></div>
+    </div>
+    <div class="lang__list" data-lang-list="">
+    {% set eng_titles = custom_translate_widget.langTitles %}
+    {% for language in custom_translate_widget.langCodes %}
+        <a class="lang__link lang__link_sub" data-ya-lang="{{ language }}" title="{{ eng_titles[language] }}">
+            <div class="lang__code lang_{{ language }}"></div>
+        </a>
+    {% endfor %}
+    </div>
+</div>
+
+{% block bottom %}
+    <script>
+        new CustomTranslate({
+            baseLang: "{{ html_lang }}",
+            transLang: "{{ custom_translate_widget.transLang }}"
+        })
+    </script>
+{% endblock %}
