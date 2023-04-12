@@ -5,7 +5,6 @@ namespace Grav\Plugin;
 use Grav\Common\Language\Language;
 use Grav\Common\Plugin;
 use Grav\Common\Grav;
-use stdClass;
 
 class CustomTranslateWidgetPlugin extends Plugin
 {
@@ -38,18 +37,15 @@ class CustomTranslateWidgetPlugin extends Plugin
     /** @event */
     public function onTwigSiteVariables(): void
     {
-        $data = new stdClass;
-        $data->langCodes = $this->config()['languages'];
-        $data->transLang = $this->config()['trans_lang'];
-
         $langCodes = $this->grav['twig']->twig_vars['language_codes'];
+        $languages = $this->config()['languages'];
 
-        $data->langTitles = [];
-        foreach ($data->langCodes as $lang) {
-            $data->langTitles[$lang] = $langCodes->getNativeName($lang);
+        $langTitles = [];
+        foreach ($languages as $lang) {
+            $langTitles[$lang] = $langCodes->getNativeName($lang);
         }
 
-        $this->grav['twig']->twig_vars[str_replace('-', '_', $this->name)] = $data;
+        $this->grav['twig']->twig_vars['language_titles'] = $langTitles;
 
         $this->grav['assets']->addCss("plugin://$this->name/assets/style.css");
         $this->grav['assets']->addJs("plugin://$this->name/assets/script.js");
