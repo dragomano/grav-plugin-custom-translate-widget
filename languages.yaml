@@ -20,8 +20,8 @@ en:
       tr: 'Turkish'
       uk: 'Ukrainian'
       zh: 'Chinese'
-    TRANS_LANG: 'Translation language on the first visit to the site'
-    TRANS_LANG_HELP: 'Select the language in which your forum will be automatically translated when first visited by visitors.'
+    TRANS_LANG: 'Automatic translation language on first visit'
+    TRANS_LANG_HELP: 'Select the language in which your site will be automatically translated when first visited by visitors.'
 
 ru:
   PLUGIN_CUSTOM_TRANSLATE_WIDGET:
@@ -45,5 +45,5 @@ ru:
       tr: 'Турецкий'
       uk: 'Украинский'
       zh: 'Китайский'
-    TRANS_LANG: 'Язык перевода, доступный при первом визите'
+    TRANS_LANG: 'Язык автоматического перевода при первом визите'
     TRANS_LANG_HELP: 'Выберите язык, на который ваш сайт будет автоматически переведён при первом посещении посетителями.'
