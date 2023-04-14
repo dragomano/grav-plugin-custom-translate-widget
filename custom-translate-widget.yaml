@@ -16,4 +16,4 @@ languages:
   - zh
   - eo
   - ar
-trans_lang: ''
+auto_translate: false

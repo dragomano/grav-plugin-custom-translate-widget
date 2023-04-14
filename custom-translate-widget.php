@@ -2,7 +2,6 @@
 
 namespace Grav\Plugin;
 
-use Grav\Common\Language\Language;
 use Grav\Common\Plugin;
 use Grav\Common\Grav;
 
@@ -54,27 +53,9 @@ class CustomTranslateWidgetPlugin extends Plugin
     /** @options for languages select in blueprints */
     public static function getLangList(): array
     {
-        return self::getTranslate('PLUGIN_CUSTOM_TRANSLATE_WIDGET.LANGUAGES_SET');
-    }
+        $langObject = Grav::instance()['language'];
+        $languages = $langObject->getLanguages();
 
-    /** @options for trans_lang select in blueprints */
-    public static function getLangList2(): array
-    {
-        return array_merge(['' => self::getTranslate('GRAV.NO')], self::getLangList());
-    }
-
-    protected static function getTranslate(string $key)
-    {
-        return self::getLangObject()->translate($key, self::getLanguages(), true);
-    }
-
-    protected static function getLangObject(): Language
-    {
-        return Grav::instance()['language'];
-    }
-
-    protected static function getLanguages(): array
-    {
-        return self::getLangObject()->getLanguages();
+        return $langObject->translate('PLUGIN_CUSTOM_TRANSLATE_WIDGET.LANGUAGES_SET', $languages, true);
     }
 }

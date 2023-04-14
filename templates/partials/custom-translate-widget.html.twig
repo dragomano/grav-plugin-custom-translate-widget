@@ -16,7 +16,7 @@
     <script>
         new CustomTranslate({
             baseLang: "{{ html_lang }}",
-            transLang: "{{ config.plugins['custom-translate-widget'].trans_lang }}"
+            autoTranslate: {{ config.plugins['custom-translate-widget'].auto_translate ? 'true' : 'false' }}
         })
     </script>
 {% endblock %}
