@@ -45,7 +45,7 @@ languages:
   - zh
   - eo
   - ar
-trans_lang: null
+auto_translate: false
 ```
 
 ---
@@ -95,5 +95,5 @@ languages:
   - zh
   - eo
   - ar
-trans_lang: null
+auto_translate: false
 ```

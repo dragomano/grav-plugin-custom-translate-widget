@@ -1,14 +1,15 @@
 class CustomTranslate {
 	constructor(params) {
 		this.baseLang = params.baseLang ?? 'en'
-		this.transLang = params.transLang ?? ''
+		this.autoTranslate = params.autoTranslate ?? false
 
 		this.init()
 	}
 
 	init() {
-		if (this.transLang && ! localStorage.getItem('yt-widget')) {
-			this.setLang(this.transLang);
+		if (this.autoTranslate && ! localStorage.getItem('yt-widget')) {
+			const browserLang = window.navigator.language ? window.navigator.language.substring(0, 2).toLowerCase() : '';
+			this.setLang(browserLang);
 		}
 
 		let script = document.createElement('script');

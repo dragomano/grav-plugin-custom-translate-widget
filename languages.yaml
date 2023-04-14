@@ -20,8 +20,7 @@ en:
       tr: 'Turkish'
       uk: 'Ukrainian'
       zh: 'Chinese'
-    TRANS_LANG: 'Automatic translation language on first visit'
-    TRANS_LANG_HELP: 'Select the language in which your site will be automatically translated when first visited by visitors.'
+    AUTO_TRANSLATE: "Automatic page translation depending on the browser's UI language"
 
 ru:
   PLUGIN_CUSTOM_TRANSLATE_WIDGET:
@@ -45,5 +44,4 @@ ru:
       tr: 'Турецкий'
       uk: 'Украинский'
       zh: 'Китайский'
-    TRANS_LANG: 'Язык автоматического перевода при первом визите'
-    TRANS_LANG_HELP: 'Выберите язык, на который ваш сайт будет автоматически переведён при первом посещении посетителями.'
+    AUTO_TRANSLATE: 'Автоматический перевод страницы в зависимости от языка интерфейса браузера'
